@@ -1,0 +1,37 @@
+body{
+    position: relative;
+    width: 1440px;
+    height: 1144px;
+    background: #FFFFFF;
+
+}
+
+/*Шапка*/
+
+header{
+    width: 1180px;
+    height: 40px;
+    left: 130px;
+    top: 32px;
+}
+
+header .logo{
+    left: 0%;
+    right: 84.58%;
+    top: 0%;
+    bottom: 10%;
+}
+
+header .search{
+    left: 32.97%;
+    right: 32.97%;
+    top: 27.5%;
+    bottom: 10%;
+}
+
+header .button{
+    width: 113px;
+    height: 38px;
+    left: 1067px;
+    top: 2px;
+}
