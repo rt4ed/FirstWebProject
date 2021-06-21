@@ -1,10 +1,11 @@
 body{
     position: relative;
-    width: 100%;
+    width: 1440px;
     height: 1144px;
     font-family: 'Rubik', sans-serif;
     background: #FFFFFF;
     text-align:center;
+    margin: auto;
 }
 
 /*Шапка*/
@@ -62,12 +63,17 @@ header .button2{
 
 
 /*Тело*/
+.tabs{
+    position: relative;
+    top: 116px;
+    left: 39%;
+}
 section .select{
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    top:116px;
+    top: 116px;
     height: 42px;
     width: 21%;
     left: 39%;
@@ -101,10 +107,26 @@ section .button4:focus{
     border-bottom: 2px solid red;
 }
 
+.body1{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 82%;
+    top: 234px;
+    left: 130px;
+    text-align: left;
 
+}
 
-
-
-
+.picture1{
+    font-weight: normal;
+}
+.text1{
+    position: relative;
+    text-align: left;
+    top: 190px;
+    left: 130px;
+}
 /*футер*/
 
