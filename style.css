@@ -1,26 +1,25 @@
 body{
-    position: relative;
-    width: 1440px;
-    height: 1144px;
     font-family: 'Rubik', sans-serif;
     background: #FFFFFF;
     text-align:center;
-    margin: auto;
+    margin: 0;
 }
 
+.main{
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
 /*Шапка*/
 
-header{
-    position: relative;
+.header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 82%;
-    height: 40px;
-    left: 130px;
-    top: 32px;
+    width: 100%;
+    margin-top: 40px;
 }
-header .block-text{
+.block-text{
     font-size: 20px;
     color: rgba(51, 51, 51, 1);
     vertical-align: 10px;
@@ -28,10 +27,10 @@ header .block-text{
     font-weight: bold;
 }
 
-header .search{
+.search{
     margin-top: 11px;
 }
-header .text{
+.text{
     height: 25px;
     width: 320px;
     border: none;
@@ -41,7 +40,7 @@ header .text{
 }
 
 
-header .button1{
+.button-search{
     background-color: #FFFFFF;
     font-size: 16px;
     padding-left:32px;
@@ -50,7 +49,12 @@ header .button1{
     font-weight: bold;
 }
 
-header .button2{
+.button-search:hover{
+    cursor: pointer;
+}
+
+
+.button-auth{
     width: 113px;
     height: 38px;
     background-color: red;
@@ -61,72 +65,238 @@ header .button2{
     font-weight: bold;
 }
 
+.button-auth:hover{
+    background-color: #CC221B;
+    cursor: pointer;
+}
+
 
 /*Тело*/
 .tabs{
-    position: relative;
-    top: 116px;
-    left: 39%;
+    margin: auto;
+    margin-top: 44px;
+    max-width: 331px;
 }
-section .select{
-    position: relative;
+
+.tabs__nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    top: 116px;
-    height: 42px;
-    width: 21%;
-    left: 39%;
-
+    width: 22%;
 }
 
-section .button3{
+.tabs__nav-btn{
     background-color: #FFFFFF;
     border: none;
     outline:none;
     font-size: 28px;
     font-weight: bold;
-
+    margin-left: 24px;
 }
 
-section .button3:focus{
+.tabs__nav-btn:focus{
     color: red;
     border-bottom: 2px solid red;
 }
+.tabs__nav-btn:hover{
+    cursor: pointer;
+}
 
-section .button4{
-    background-color: #FFFFFF;
-    border: none;
-    outline:none;
-    font-size: 28px;
+/*Фильмы*/
+
+.section-films{
+    margin: auto;
+    text-align: left;
+}
+
+.section__text{
+    margin-top: 32px;
+    margin-bottom: 16px;
+    padding-left: 10px;
+    font-size: 24px;
     font-weight: bold;
 }
 
-section .button4:focus{
-    color: red;
-    border-bottom: 2px solid red;
-}
-
-.body1{
-    position: relative;
+.films-list{
+    font-size: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 82%;
-    top: 234px;
-    left: 130px;
-    text-align: left;
-
+    width: 100%;
+    max-width: 1180px;
+    padding: 0px;
+    list-style-type: none;
+    horiz-align: center;
 }
-
-.picture1{
-    font-weight: normal;
-}
-.text1{
+.li\.films-item{
     position: relative;
+    margin: 5px;
+    width: 280px;
+    height: 434px;
+
+}
+
+.li\.films-list__text{
+    margin-top: 16px;
+    font-size: 20px;
+}
+
+.li\.films-list__description{
+    color: #FFFFFF;
+    line-height: 1.5;
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+    width: 248px;
+    height: 338px;
+    padding: 16px;
+    z-index: -1;
+    border-radius: 8px;
+}
+
+.li\.films-item:hover img{
+    opacity: 0.5;
+    background:#C1F1E4;
+    box-shadow: 200px 0 0 0 rgba(0,0,0,.3) inset;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.li\.films-item:hover .li\.films-list__description{
+    transition: .2s;
+    z-index: 5;
+    background: rgba(0,0,0,0.6);
+    cursor: pointer;
+}
+
+
+/*Жанры*/
+.genre__text{
+    margin-top: 32px;
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.genre-list{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 100%;
+    max-width: 1180px;
+    padding: 0px;
+}
+
+.li\.genre-list{
+    width: 280px;
+    height: 208px;
+    background-color: red;
+    border-radius: 6px;
+    box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+}
+
+.li\.genre-list:hover{
+    cursor: pointer;
+}
+
+.li\.genre-list__text{
+    font-size: 48px;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 0px;
+}
+.li\.genre-list__text__name{
+    font-size: 20px;
+    text-align: center;
+    margin-top:32px;
+    color: #FFFFFF;
+}
+
+#first{
+    background: linear-gradient(127.83deg, #F2C94C 8.44%, #F29A4A 91.36%);
+}
+#second{
+    background: linear-gradient(127.83deg, #F2994A 8.44%, #EB5757 91.36%);
+}
+#third{
+    background: linear-gradient(127.83deg, #56CCF2 8.44%, #2F80ED 91.36%);
+}
+#fourth{
+    background: linear-gradient(127.83deg, #828282 8.44%, #333333 91.36%);
+}
+/*tv*/
+.section-tv{
+    margin: auto;
     text-align: left;
-    top: 190px;
-    left: 130px;
+}
+.tv-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    max-width: 1180px;
+    width: 100%;
+
+    border-radius: 8px;
+}
+
+.li\.tv-item{
+    display: flex;
+    height: 162px;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    background: #F2F2F2;
+}
+
+.li\.tv-item img{
+    padding-left: 143px;
+    padding-right: 143px;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.li\.tv-item__text p{
+    font-size: 16px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.li\.tv-item__text__first{
+    color: red;
 }
 /*футер*/
 
+.footer{
+    display: flex;
+    width: 100%;
+    height: 120px;
+    background: #F2F2F2;
+    text-align: left;
+}
+
+.footer img{
+    padding-left: 143px;
+    padding-right: 40px;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.footer__text{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.footer__text p{
+    font-size: 16px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+#htc-cs\.ru{
+    margin-top: 7px;
+    color: #1F4766;
+    font-weight: bold;
+}

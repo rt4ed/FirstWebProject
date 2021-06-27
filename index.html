@@ -9,45 +9,115 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <img src="images\sign.svg">
-            <span class="block-text">Видеосервис</span>
+    <div class="main">
+        <header class="header">
+            <div class="logo">
+                <img src="images\sign.svg">
+                <span class="block-text">Видеосервис</span>
+            </div>
+            <div class="search">
+                <input class="text" type="text" size="40" placeholder="Поиск...">
+                <button class="button-search">Найти</button>
+            </div>
+            <div class="button">
+                <button class="button-auth">Войти</button>
+            </div>
+        </header>
+        <div class="tabs">
+            <div class="tabs__nav">
+                <button class="tabs__nav-btn">Фильмы</button>
+                <button class="tabs__nav-btn">Телеканалы</button>
+            </div>
         </div>
-        <div class="search">
-            <input class="text" type="text" size="40" placeholder="Поиск...">
-            <button class="button1">Найти</button>
-        </div>
-        <div class="button">
-            <button class="button2">Войти</button>
-        </div>
-    </header>
-    <section class="tabs">
-        <div class="select">
-            <button class="button3">Фильмы</button>
-            <button class="button4">Телеканалы</button>
-        </div>
-    </section>
-    <div>
-        <h2 class="text1">🔥 Новинки</h2>
+        <section class="section-films">
+            <p class="section__text">🔥 Новинки</p>
+            <ul class="films-list">
+                <li class="li.films-item">
+                    <img src="images\picture.svg">
+                    <p class="li.films-list__text">Мульт в кино. Выпуск №103. Некогда грустить!</p>
+                </li>
+                <li class="li.films-item">
+                    <img src="images\picture2.svg">
+                    <p class="li.films-list__text">Новый Бэтмен</p>
+                </li>
+                <li class="li.films-item">
+                    <img src="images\image3.svg">
+                    <p class="li.films-list__text">Однажды... в Голливуде</p>
+                    <div class="li.films-list__description">Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире киноиндустрии.</div>
+                </li>
+                <li class="li.films-item">
+                    <img src="images\picture4.svg">
+                    <p class="li.films-list__text">Стриптизёрши</p>
+                </li>
+            </ul>
+            <p class="genre__text">Жанры</p>
+            <ul class="genre-list">
+                <li id="first" class="li.genre-list">
+                    <p class="li.genre-list__text">😁</p>
+                    <p class="li.genre-list__text__name">Комедии</p>
+                </li>
+                <li id="second" class="li.genre-list">
+                    <p class="li.genre-list__text">😭</p>
+                    <p class="li.genre-list__text__name">Драмы</p>
+                </li>
+                <li id="third" class="li.genre-list">
+                    <p class="li.genre-list__text">👽</p>
+                    <p class="li.genre-list__text__name">Фантастика</p>
+                </li>
+                <li id="fourth" class="li.genre-list">
+                    <p class="li.genre-list__text">👻</p>
+                    <p class="li.genre-list__text__name">Ужасы</p>
+                </li>
+            </ul>
+        </section>
+        <section class="section-tv">
+            <ul class="tv-list">
+                <li class="li.tv-item">
+                    <img src="images\logo1.svg">
+                    <div class="li.tv-item__text">
+                        <h3>Первый канал</h3>
+                        <p class="li.tv-item__text__first">13:00   Новости(с субтитрами)</p>
+                        <p>14:00   Давай поженимся</p>
+                        <p>15:00   Другин новости</p>
+                    </div>
+                </li>
+                <li class="li.tv-item">
+                    <img src="images\logo2.svg">
+                    <div class="li.tv-item__text">
+                        <h3>2х2</h3>
+                        <p class="li.tv-item__text__first">13:00   МУЛЬТ ТВ. Сезон 4, 7 серия</p>
+                        <p>14:00   ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия</p>
+                        <p>15:00   БУРДАШЕВ. Сезон 1, 20 серия</p>
+                    </div>
+                </li>
+                <li class="li.tv-item">
+                    <img src="images\logo3.svg">
+                    <div class="li.tv-item__text">
+                        <h3>РБК</h3>
+                        <p class="li.tv-item__text__first">13:00   ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС</p>
+                        <p>14:00   ДЕНЬ. Главные темы</p>
+                        <p>15:00   Главные новости</p>
+                    </div>
+                </li>
+                <li class="li.tv-item">
+                    <img src="images\logo4.svg">
+                    <div class="li.tv-item__text">
+                        <h3>AMEDIA PREMIUM</h3>
+                        <p class="li.tv-item__text__first">13:00   Клиент всегда мёртв</p>
+                        <p>14:00   Голодные игры: Сойка-пересмешница. Часть I</p>
+                        <p>15:00   Секс в большом городе</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
     </div>
-    <div class="body1">
-        <div class="picture1">
-            <img src="images\image.svg" class="image1">
-            <p>Мульт в кино. Выпуск №103. Некогда грустить!</p>
+    <footer class="footer">
+        <img src="images\htc-cs-logo.svg">
+        <div class="footer__text">
+            <p>426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</p>
+            <p>+7 (3412) 93-88-61, 43-29-29</p>
+            <p id="htc-cs.ru">htc-cs.ru</p>
         </div>
-        <div class="picture2">
-            <img src="images\image2.svg" class="image2">
-            <p>Новый Бэтмен</p>
-        </div>
-        <div class="picture3">
-            <img src="images\image3.svg" class="image3">
-            <p>Однажды... в Голливуде</p>
-        </div>
-        <div class="picture4">
-            <img src="images\image4.svg" class="image4">
-            <p>Стриптизёрши</p>
-        </div>
-    </div>
+    </footer>
 </body>
 </html>
