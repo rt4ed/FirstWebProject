@@ -19,8 +19,12 @@
                 <input class="text" type="text" size="40" placeholder="Поиск...">
                 <button class="button-search">Найти</button>
             </div>
-            <div class="button">
+            <div class="button active">
                 <button class="button-auth" data-but="#but_1">Войти</button>
+            </div>
+            <div class="auth_header" id="auth_headerId">
+                <span class="auth_login" id="auth_name"></span>
+                <button class="auth_exit" id="auth_exitId">Выйти</button>
             </div>
         </header>
         <div class="tabs">
@@ -144,6 +148,24 @@
                         </div>
                     </div>
                 </li>
+                <li class="li.tv-item">
+                    <img src="images\logo1.svg">
+                    <div class="li.tv-item__text">
+                        <h3>Первый канал</h3>
+                        <div class="li.tv-item__text__first">
+                            <span>13:00</span>
+                            <span class="description">Новости(с субтитрами)</span>
+                        </div>
+                        <div class="wrapper">
+                            <span>14:00</span>
+                            <span class="description">Давай поженимся</span>
+                        </div>
+                        <div class="wrapper">
+                            <span>15:00</span>
+                            <span class="description">Другин новости</span>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </section>
     </div>
@@ -159,14 +181,14 @@
         <div class="modal_content">
             <div class="modal_inner">
                 <h1 class="entrance__text">Вход</h1>
-                <input class="modal__text" type="text"  placeholder="Логин">
-                <input class="modal__text" type="text"  placeholder="Пароль">
+                <input class="modal__text" type="text"  placeholder="Логин" id="login">
+                <input class="modal__text" type="text"  placeholder="Пароль" id="password">
                 <div class="checkbox_modal">
                     <input type="checkbox" id="remember" name="remember">
                     <label for="remember">Запомнить</label>
                 </div>
             </div>
-            <button class="modal_auth">Войти</button>
+            <button class="modal_auth" id="check">Войти</button>
         </div>
     </div>
     <script src="index.js"></script>
