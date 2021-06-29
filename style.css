@@ -29,6 +29,7 @@ body{
 
 .search{
     margin-top: 11px;
+    margin-right: 50px;
 }
 .text{
     height: 25px;
@@ -63,6 +64,7 @@ body{
     border-radius: 5px;
     margin-top: 2px;
     font-weight: bold;
+    border: none;
 }
 
 .button-auth:hover{
@@ -82,19 +84,17 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 22%;
 }
 
 .tabs__nav-btn{
     background-color: #FFFFFF;
-    border: none;
+    border: 2px solid white;
     outline:none;
     font-size: 28px;
     font-weight: bold;
-    margin-left: 24px;
 }
 
-.tabs__nav-btn:focus{
+.tabs__nav-btn.active{
     color: red;
     border-bottom: 2px solid red;
 }
@@ -110,7 +110,7 @@ body{
 }
 
 .section__text{
-    margin-top: 32px;
+
     margin-bottom: 16px;
     padding-left: 10px;
     font-size: 24px;
@@ -213,20 +213,40 @@ body{
 
 #first{
     background: linear-gradient(127.83deg, #F2C94C 8.44%, #F29A4A 91.36%);
+    opacity: 0.8;
+}
+#first:hover{
+    opacity: 1;
 }
 #second{
     background: linear-gradient(127.83deg, #F2994A 8.44%, #EB5757 91.36%);
+    opacity: 0.8;
+}
+#second:hover{
+    opacity: 1;
 }
 #third{
     background: linear-gradient(127.83deg, #56CCF2 8.44%, #2F80ED 91.36%);
+    opacity: 0.8;
+}
+#third:hover{
+    opacity: 1;
 }
 #fourth{
     background: linear-gradient(127.83deg, #828282 8.44%, #333333 91.36%);
+    opacity: 0.8
+}
+#fourth:hover{
+    opacity: 1;
 }
 /*tv*/
 .section-tv{
-    margin: auto;
+    margin-top: 32px;
     text-align: left;
+    display: none;
+}
+.section-tv.active{
+    display: block;
 }
 .tv-list{
     display: flex;
@@ -250,6 +270,7 @@ body{
     background: #F2F2F2;
 }
 
+
 .li\.tv-item img{
     padding-left: 143px;
     padding-right: 143px;
@@ -263,13 +284,27 @@ body{
     margin-top: 12px;
     margin-bottom: 12px;
 }
+.description{
+    margin-left: 16px;
+}
 
 .li\.tv-item__text__first{
+    font-size: 16px;
+    margin-top: 12px;
+    margin-bottom: 12px;
     color: red;
 }
+
+.wrapper{
+    font-size: 16px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
 /*футер*/
 
 .footer{
+    margin-top: 56px;
     display: flex;
     width: 100%;
     height: 120px;
@@ -295,8 +330,77 @@ body{
     margin-bottom: 3px;
 }
 
+
 #htc-cs\.ru{
     margin-top: 7px;
     color: #1F4766;
     font-weight: bold;
+}
+
+/*Модальное окно */
+.modal{
+    display: none;
+}
+
+.modal.active{
+    display: block;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal .modal_content{
+    background-color: #fefefe;
+    margin: 12% auto;
+    border: 1px solid #888;
+    width: 304px;
+    height: 394px;
+    border-radius: 8px;
+    z-index: 9999;
+}
+.entrance__text{
+    margin-top: 36px;
+    margin-bottom: 24px;
+}
+#remember{
+    transform:scale(1.23);
+    opacity:0.9;
+    cursor:pointer;
+    margin: 0;
+}
+
+.modal__text{
+    margin-bottom: 24px;
+    width: 232px;
+    height: 25px;
+    border: none;
+    border-bottom: 1px solid #333333;
+    outline:none;
+}
+.checkbox_modal{
+    text-align: left;
+    margin-left: 36px;
+}
+
+.checkbox_modal label{
+    margin-left: 8px;
+}
+.modal_auth{
+    border-radius: 4px;
+    background-color: #E5261E;;
+    color: white;
+    border: none;
+    width: 113px;
+    height: 38px;
+    font-size: 16px;
+    margin-top: 106px;
+}
+.modal_auth:hover{
+    cursor: pointer;
+    background-color: #CC221B;
 }
