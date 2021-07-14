@@ -170,10 +170,17 @@ body{
     height: 434px;
 
 }
+.li\.films-item.hide{
+    display: none;
+
+}
 
 .li\.films-list__text{
     margin-top: 16px;
     font-size: 20px;
+}
+.li\.films-list__text.hide{
+    display: none;
 }
 
 .li\.films-list__description{

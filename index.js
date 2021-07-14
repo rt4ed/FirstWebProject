@@ -87,4 +87,46 @@ document.getElementById('auth_exitId').onclick=function (){
     tabButAuth.forEach(function (item){
         item.classList.add('active');
     });
+
+    document.getElementById('login').value = "";
+    document.getElementById('password').value = "";
+}
+
+/*function myFunction() {
+    // Объявить переменные
+    let input, filter, ul, li, a, i;
+    input = document.getElementById('mySearch');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById('films-list');
+    li = ul.getElementsByTagName("li");
+
+    // Перебирайте все элементы списка и скрывайте те, которые не соответствуют поисковому запросу
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}*/
+document.querySelector('#mySearch').oninput = function (){
+    let val = this.value.trim();
+    val = this.value.toUpperCase();
+    let FilmsItems = document.querySelectorAll('.films-list li');
+    if(val != ''){
+        FilmsItems.forEach(function (elem){
+            if (elem.innerText.toUpperCase().search(val) == -1){
+                elem.classList.add('hide');
+            }
+            else{
+                elem.classList.remove('hide');
+            }
+        });
+    }
+    else {
+        FilmsItems.forEach(function (elem){
+            elem.classList.remove('hide');
+        });
+    }
 }
